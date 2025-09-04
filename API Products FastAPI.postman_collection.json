@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "933ed424-8f89-46ec-9285-eddcd172bb58",
+		"name": "API Products FastAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24299772"
+	},
+	"item": [
+		{
+			"name": "Listar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{http://localhost:8000/productos/}}/productos/",
+					"host": [
+						"{{http://localhost:8000/productos/}}"
+					],
+					"path": [
+						"productos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Producto",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Laptop Lenovo\",\r\n  \"descripcion\": \"Ultrabook ligera\",\r\n  \"precio\": 899.99,\r\n  \"categoria\": \"Electrónica\"\r\n}\r\n\r\n"
+				},
+				"url": {
+					"raw": "{{http://localhost:8000/productos/}}",
+					"host": [
+						"{{http://localhost:8000/productos/}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Producto 4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/productos/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"productos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Producto 4",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nombre\": \"Otro Computador\",\r\n  \"descripcion\": \"Ultrabook ligera pero bien potente\",\r\n  \"precio\": 1299.99,\r\n  \"categoria\": \"Computacion\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8000/productos/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"productos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "http://localhost:8000/productos/",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
